@@ -8,15 +8,14 @@ body {
 
     width: 100%;
     height: 100%;
-    
+
 }
 
-.container{
+.container {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    border: 1px solid orange;
     gap: 10px;
     background-color: mintcream;
 
@@ -34,7 +33,7 @@ body {
 
 }
 
-.header-item1{
+.header-item1 {
 
     display: grid;
     grid-column: 1/3;
@@ -42,16 +41,17 @@ body {
     gap: 10px;
 }
 
-.search{
+.search {
 
     width: 440px;
     height: 22px;
     border-radius: 8px;
     border: 1px solid grey;
     background-color: rgb(209, 202, 202);
+    padding-left: 10px;
 }
 
-.first-child{
+.first-child {
 
     display: grid;
     grid-column: 1/1;
@@ -59,7 +59,7 @@ body {
     padding: 5px;
 }
 
-.second-child{
+.second-child {
     display: grid;
     grid-template-columns: 60px 60px 150px;
     margin-left: 60px;
@@ -69,7 +69,7 @@ body {
     align-items: center;
 }
 
-.second-child>img{
+.second-child>img {
 
     width: 40px;
     height: 40px;
@@ -79,7 +79,7 @@ body {
 }
 
 
-.header-item2{
+.header-item2 {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,39 +87,48 @@ body {
     padding: 5px;
 }
 
-.item2-child1{
+.item2-child1 {
 
     display: grid;
     grid-template-columns: 90px 200px;
     margin-left: 30px;
-    align-items: end;
+    align-items: center;
 }
 
-.item2-child1>img{
+.item2-child1>img {
 
     border-radius: 50%;
     width: 55px;
     height: 55px;
 }
 
-.buttons{
+.buttons {
 
     display: grid;
     grid-template-columns: 100px 100px 100px;
     margin-left: 130px;
-    align-items: center;    
+    align-items: center;
 }
 
-.buttons>button{
-    
+.buttons>button {
+
     width: 70px;
     height: 27px;
     border-radius: 9px;
     background-color: skyblue;
     border: 1px solid rgb(173, 173, 217);
     color: white;
-    font-weight: bolder;
+    font-weight: bold;
+    cursor: pointer;
 
+}
+
+.buttons>button:hover {
+
+    background-color: darkblue;
+    font-size: 15px;
+    width: 85px;
+    height: 35px;
 }
 
 
@@ -131,9 +140,55 @@ body {
 
 
 
-.sidebar{
+.sidebar {
 
     display: grid;
     grid-row: 1/6;
     background-color: skyblue;
+}
+
+.sidebar-child {
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+    justify-items: center;
+    font-size: 15px;
+}
+
+.fchild {
+
+    align-self: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.schild {
+
+    align-self: center;
+}
+
+
+.tchild {
+
+    align-self: center;
+    margin-right: 37px;
+}
+
+.sidebar-child>.schild>ul,
+.sidebar-child>.tchild>ul {
+
+    list-style: none;
+    align-items: center;
+}
+
+
+.sidebar-child>.schild>ul>li,
+.sidebar-child>.tchild>ul>li,.fchild{
+
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    justify-items: space-evenly;
+    padding: 5px;
+    align-items: center;
 }
